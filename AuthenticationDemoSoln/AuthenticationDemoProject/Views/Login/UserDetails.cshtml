@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AuthenticationDemoProject.Models.User>
+
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<h2>UserDetails</h2>
+
+
+
+@foreach (var item in Model)
+{
+    @Html.Partial("SingleUser", item)
+}
+@Html.Partial("SamplePartial")
+
+@{ 
+    Html.RenderPartial("SamplePartial");
+}
+@*here RenderPartial will be faster if you need to do lot of rendering works as partial converts the result to mvc string and returns
+    the output but renderPartial returns void on return*@

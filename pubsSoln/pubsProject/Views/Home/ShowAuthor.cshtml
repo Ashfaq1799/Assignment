@@ -1,0 +1,35 @@
+﻿@model IEnumerable<pubsProject.Models.author>
+
+@{
+    ViewBag.Title = "ShowAuthor";
+}
+
+<h2>ShowAuthor</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Author FirstName
+        </th>
+        <th>
+            Author LastName
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.au_lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.au_fname)
+            </td>
+            <td>
+                @Html.ActionLink("Expand", "ShowBooks")
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Back", "Home")

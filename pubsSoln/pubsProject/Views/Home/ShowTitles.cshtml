@@ -1,0 +1,41 @@
+﻿@model IEnumerable<pubsProject.Models.title>
+
+@{
+    ViewBag.Title = "ShowTitles";
+}
+
+<h2>ShowTitles</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publisher.pub_name)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.publisher.pub_name)
+            </td>
+            <td>
+                @Html.ActionLink("Buy", "Checkout")
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Back", "Home")

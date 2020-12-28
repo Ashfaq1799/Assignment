@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+@Html.Partial("WelcomeView")
+    <div>
+        @Html.ActionLink("Title of books", "ShowTitles") |  @Html.ActionLink("Authors of books", "ShowAuthor")
+    </div>

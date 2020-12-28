@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+@using (Html.BeginForm("About", "Home", FormMethod.Post))
+{
+    <button style="color:darkred">Logout</button>
+}
+@Html.Partial("MypartialView")
+
